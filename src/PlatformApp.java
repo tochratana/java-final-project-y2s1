@@ -41,8 +41,6 @@ public class PlatformApp {
             SkillView skillView = new SkillView(scanner, skillController, authController, exchangeController);
             ExchangeView exchangeView = new ExchangeView(scanner, exchangeController, authController);
             MainMenuView mainMenuView = new MainMenuView(scanner, authController, skillView, exchangeView);
-
-            // ===== START APPLICATION =====
             System.out.println("✓ Application initialized successfully!\n");
 
             // Authentication loop

@@ -9,4 +9,6 @@ public interface UserRepository {
     Optional<User> findByUsername(String username) throws SQLException;
     Optional<User> findById(Long id) throws SQLException;
     boolean existsByUsername(String username) throws SQLException;
+    boolean existsByEmail(String email) throws SQLException;
+
 }
