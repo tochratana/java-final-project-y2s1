@@ -13,5 +13,5 @@ public class SkillDTO {
     private Integer experienceYears;
     private String description;
     private Boolean availability;
-    private String ownerName; // for displaying
+    private String ownerName;
 }

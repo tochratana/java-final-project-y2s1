@@ -16,7 +16,7 @@ public class ExchangeRequest {
     private String requestedSkill;
     private String offeredSkill;
     private String requestMessage;
-    private String status; // PENDING, ACCEPTED, REJECTED, COMPLETED, CANCELLED
+    private String status;
     private Boolean requesterConfirmed;
     private Boolean providerConfirmed;
     private LocalDateTime createdAt;

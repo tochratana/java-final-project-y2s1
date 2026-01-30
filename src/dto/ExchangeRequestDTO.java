@@ -8,10 +8,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class ExchangeRequestDTO {
-    private Long id;
-    private String requesterName;
-    private String providerName;
-    private String requestedSkill;
+    private Long id; // id user that we want request
+    private String requesterName; // who learn
+    private String providerName; // who teach
+    private String requestedSkill; //
     private String offeredSkill;
     private String requestMessage;
     private String status;

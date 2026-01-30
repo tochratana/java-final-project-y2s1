@@ -11,11 +11,11 @@ public class Skill {
     private Long id;
     private Long userId;
     private String skillName;
-    private String skillLevel; // BEGINNER, INTERMEDIATE, ADVANCED, EXPERT
+    private String skillLevel;
     private Integer experienceYears;
     private String description;
-    private Boolean availability; // true = available for exchange
-    private String status; // ACTIVE, INACTIVE
+    private Boolean availability;
+    private String status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }
