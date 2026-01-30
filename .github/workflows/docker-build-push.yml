@@ -1,4 +1,4 @@
-name: Build & Push Plain Java Docker Image
+name: Build and Push Docker Image
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout source
         uses: actions/checkout@v4
 
       - name: Set up Java 17
@@ -19,10 +19,14 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Compile Java (no Maven)
+      - name: Compile Java (Lombok + PostgreSQL)
         run: |
           mkdir -p out/production/skill-exchange-system
-          javac -d out/production/skill-exchange-system $(find src -name "*.java")
+          javac \
+            -cp "libs/*" \
+            -processorpath "libs/lombok.jar" \
+            -d out/production/skill-exchange-system \
+            $(find src -name "*.java")
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
@@ -30,11 +34,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Build and Push Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: true
-          tags: |
-            tochratana/skill-exchange-system:latest
-            tochratana/skill-exchange-system:${{ github.run_number }}
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/skill-exchange-system:latest .
+
+      - name: Push Docker image
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/skill-exchange-system:latest
