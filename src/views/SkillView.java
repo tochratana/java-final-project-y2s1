@@ -25,7 +25,7 @@ public class SkillView extends ConsoleView {
 
     public void showMySkillsMenu() {
         while (true) {
-            clearScreen();
+            // clearScreen();
             printHeader("MY SKILLS");
 
             Long userId = authController.getCurrentUser().getId();
@@ -62,7 +62,7 @@ public class SkillView extends ConsoleView {
     }
 
     private void handleAddSkill() {
-        clearScreen();
+        // clearScreen();
         printHeader("ADD NEW SKILL");
 
         String skillName = readString("Skill Name: ");
@@ -94,7 +94,7 @@ public class SkillView extends ConsoleView {
     }
 
     private void handleUpdateSkill() {
-        clearScreen();
+        // clearScreen();
         printHeader("UPDATE SKILL");
 
         Long skillId = readLong("Enter Skill ID to update: ");
@@ -128,7 +128,7 @@ public class SkillView extends ConsoleView {
     }
 
     private void handleDeleteSkill() {
-        clearScreen();
+        // clearScreen();
         printHeader("DELETE SKILL");
 
         Long skillId = readLong("Enter Skill ID to delete: ");
@@ -142,7 +142,7 @@ public class SkillView extends ConsoleView {
     }
 
     public void showBrowseSkillsMenu() {
-        clearScreen();
+        // clearScreen();
         printHeader("BROWSE AVAILABLE SKILLS");
 
         Long userId = authController.getCurrentUser().getId();
@@ -161,7 +161,7 @@ public class SkillView extends ConsoleView {
     }
 
     private void handleCreateExchangeRequest() {
-        clearScreen();
+        // clearScreen();
         printHeader("CREATE EXCHANGE REQUEST");
 
         Long providerId = readLong("Enter Provider User ID: ");

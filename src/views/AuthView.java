@@ -18,7 +18,7 @@ public class AuthView extends ConsoleView {
 
     public void showAuthMenu() {
         while (true) {
-            clearScreen();
+            // clearScreen();
             printHeader("SKILL EXCHANGE PLATFORM");
             System.out.println("\n1. Login");
             System.out.println("2. Register");
@@ -48,7 +48,7 @@ public class AuthView extends ConsoleView {
     }
 
     private void handleLogin() {
-        clearScreen();
+        // clearScreen();
         printHeader("LOGIN");
 
         String username = readString("Username: ");
@@ -63,7 +63,7 @@ public class AuthView extends ConsoleView {
     }
 
     private void handleRegister() {
-        clearScreen();
+        // clearScreen();
         printHeader("REGISTER NEW ACCOUNT");
 
         String username = readString("Username: ");

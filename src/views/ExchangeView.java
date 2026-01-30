@@ -19,7 +19,7 @@ public class ExchangeView extends ConsoleView {
     }
 
     public void showMyRequests() {
-        clearScreen();
+        // clearScreen();
         printHeader("MY EXCHANGE REQUESTS");
 
         Long userId = authController.getCurrentUser().getId();
@@ -38,7 +38,7 @@ public class ExchangeView extends ConsoleView {
     }
 
     public void showIncomingRequests() {
-        clearScreen();
+        //clearScreen();
         printHeader("INCOMING REQUESTS");
 
         Long userId = authController.getCurrentUser().getId();

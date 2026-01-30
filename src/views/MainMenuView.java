@@ -22,7 +22,7 @@ public class MainMenuView extends ConsoleView {
 
     public void showMainMenu() {
         while (authController.isLoggedIn()) {
-            clearScreen();
+            // clearScreen();
             User user = authController.getCurrentUser();
 
             printHeader("MAIN MENU");

@@ -30,7 +30,6 @@ public class AuthServiceImpl implements AuthService {
                 throw new IllegalArgumentException("Username already exists");
             }
 
-            // Hash password (in production, use BCrypt)
             String hashedPassword = hashPassword(dto.getPassword());
 
             User user = User.builder()
@@ -72,7 +71,6 @@ public class AuthServiceImpl implements AuthService {
     }
 
     private String hashPassword(String password) {
-        // Simple hash for demo - use BCrypt in production
         return "hashed_" + password;
     }
 
