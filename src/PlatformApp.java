@@ -38,7 +38,7 @@ public class PlatformApp {
 
             // Init view
             AuthView authView = new AuthView(scanner, authController);
-            SkillView skillView = new SkillView(scanner, skillController, authController, exchangeController);
+            SkillView skillView = new SkillView(scanner, skillController, authController, exchangeController, skillRepository);
             ExchangeView exchangeView = new ExchangeView(scanner, exchangeController, authController);
             MainMenuView mainMenuView = new MainMenuView(scanner, authController, skillView, exchangeView);
             System.out.println("✓ Application initialized successfully!\n");
